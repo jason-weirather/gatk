@@ -1,0 +1,22 @@
+package:
+  name: gatk
+  version: "4.beta.6"
+
+source:
+  git_rev: 4.beta.6
+  git_url: https://github.com/jason-weirather/gatk.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - java-jdk 8.*
+  run:
+    - java-jdk 8.*
+    - r-essentials 3.4.*
+
+about:
+  home: https://github.com/jason-weirather/gatk
+  license: BSD
+  license_file: LICENSE.TXT
