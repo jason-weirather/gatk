@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 BASEDIR=$(dirname "$0")
-java -Xmx8g -jar $BASEDIR/../jar/gatk.jar "$@"
+if [[ $1 =~ ^- ]];
+  then OPTION=$1;
+  else OPTION='-Xmx4g';
+fi
+java $OPTION -jar $BASEDIR/../jar/gatk.jar "${@:2}"
