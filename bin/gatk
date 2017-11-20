@@ -4,4 +4,7 @@ if [[ $1 =~ ^- ]];
   then OPTION=$1;
   else OPTION='-Xmx4g';
 fi
-java $OPTION -jar $BASEDIR/../jar/gatk.jar "${@:2}"
+if [[ $1 =~ ^- ]]; 
+  then java $OPTION -jar $BASEDIR/../jar/gatk.jar "${@:2}";
+  else java $OPTION -jar $BASEDIR/../jar/gatk.jar "$@";
+fi
