@@ -1,3 +1,25 @@
+##### This is a fork for Conda/pipeline integration. Please visit https://github.com/broadinstitute/gatk and appropriatly credit those entites affiliated with those tools.
+
+Please see `LICENSE` for details.
+
+You can install gatk through Conda
+
+`conda install -c vacation gatk`
+
+If you run into name conflicts of other GATKs or the installer hangs you may need to use
+
+`conda install --override-channels -c vacation gatk`
+
+The jar files are available in the conda installation
+
+`<path to conda>envs/<environment name>/jar/gatk.jar`
+
+or you can just use the gatk command.  If you want to adjust the java options you can make your first argument the java options i.e.
+
+`gatk -Xmx4g <subcommand>`
+
+Without the argument, the command will request 4g of memory.
+
 [![Build Status](https://travis-ci.org/broadinstitute/gatk.svg?branch=master)](https://travis-ci.org/broadinstitute/gatk)
 [![codecov](https://codecov.io/gh/broadinstitute/gatk/branch/master/graph/badge.svg)](https://codecov.io/gh/broadinstitute/gatk)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.broadinstitute/gatk/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.broadinstitute/gatk)
