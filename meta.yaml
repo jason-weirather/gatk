@@ -1,5 +1,5 @@
 package:
-  name: gatk
+  name: vacation-gatk
   version: "4.beta.6"
 
 source:
